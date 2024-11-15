@@ -1,0 +1,318 @@
+/* Cấu hình chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Các phần còn lại của CSS */
+nav {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    height: 2em; /* Đặt chiều cao cố định */
+    position: relative; /* Navbar sẽ cuộn theo trang */
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(176, 31, 31);
+    text-align: center;
+    padding: 0 6px;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Sử dụng ::after để thêm dấu gạch phân cách */
+nav ul li::after {
+    content: "|";
+    color: rgb(195, 192, 192);
+    margin-left: 10px;
+    display: inline-block;
+    align-self: center;
+}
+
+nav ul li:last-child::after {
+    content: "";
+}
+
+/* Header */
+
+/* header {
+    background-color: #4CAF50;
+    color: rgb(245, 21, 21);    
+    left: 0;
+    top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 50px;
+    transition: transform 0.3s ease; 
+    z-index: 100000;
+} */
+
+header {
+    background-color: #4CAF50;
+    color: rgb(245, 21, 21);
+    width: 100%;
+    padding: 20px 50px;
+    /* transition: top 0.3s ease; */
+    position: absolute;
+    top: 2em; /* Ban đầu header sẽ nằm ngay dưới navbar */
+    z-index: 1000;
+}
+
+/* .header {
+    background-color: #4CAF50;
+    color: #f51515;
+    width: 100%;
+    padding: 20px 50px;
+    transition: top 0.3s ease;
+    position: relative;
+    top: 2em;
+    z-index: 900;
+} */
+
+/* Khi header được dính cố định */
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.test{
+    background-color: #111;
+}
+
+/* .header-bottom dùng Flexbox để sắp xếp logo và thanh tìm kiếm */
+.header-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px 20px; /* Giảm padding-top và padding-bottom xuống 2px để thu nhỏ chiều cao */
+    flex-direction: row;
+}
+/* Logo */
+.logo {
+    margin-right: 20px;
+    height: 40px;
+}
+
+/* Phần thanh tìm kiếm */
+.search {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%; /* Đảm bảo phần tìm kiếm chiếm toàn bộ chiều rộng */
+}
+
+/* Ô tìm kiếm */
+.search-input {
+    padding: 6px 12px; /* Giữ padding như trước */
+    font-size: 15px; /* Giảm nhẹ kích thước font chữ */
+    min-width: 50px; /* Đảm bảo độ rộng tối thiểu */
+    width: 800px; /* Tăng chiều rộng lên gấp đôi (hoặc theo kích thước bạn mong muốn) */
+    max-width: 100%; /* Đảm bảo không bị vượt quá container */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Nút tìm kiếm */
+.search-btn {
+    background-color: white;
+    color: #333;
+    padding: 6px 12px; /* Giảm padding nhẹ */
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px; /* Giảm padding nhẹ */
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-btn:hover{
+    background-color:#333;
+    color: white;
+    
+}
+
+.signin-btn{
+    background-color: white;
+    color: #333;
+    padding: 6px 12px; /* Giảm padding nhẹ */
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Main content */
+main {
+    padding: 87px 80px 0 80px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+}
+
+.container-footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.wrapper-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-widget{
+    width: calc(20%-30px);
+    margin: 0 15px 50px;
+    padding: 12px 12px;
+}
+
+.footer-widget:nth-child(1){
+    width: calc(40%-50px);
+    margin-right: 15px;
+}
+
+.logo-footer{
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.footer-widget p{
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.socials li{
+    list-style: none;
+}
+
+.socials li a{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    color: #000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+
+.socials li a:hover{
+    background-color: aqua;
+}
+
+.footer-widget h6{
+    color: #333;
+    margin: 10px 0 35px;
+    font-size: 20pxp;
+    font-weight: 600;
+}
+
+.footer-widget .links li{
+list-style: none;
+}
+
+.footer-widget .links li a{
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 32px;
+    transition: all 0.3s ease-out;
+    display: flex;
+}
+
+.footer-widget .links li a:hover{
+    color: aqua;
+}
+
+.copyright-wrapper{
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.copyright-wrapper p{
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+@media (max-width:992px){
+
+    .container-footer{
+        max-width: 960px;
+    }
+    
+    .wrapper-footer .footer-widget,
+    .wrapper-footer .footer-widget:nth-child(1){
+        width: calc(50%-30px);
+    }
+}
+@media (max-width:768px){
+    .container-footer{
+        max-width: 720px;
+    }
+
+    .wrapper-footer .footer-widget,
+    .wrapper-footer .footer-widget:nth-child(1){
+        width: 100%;
+        margin: 0 10px 50px;
+    }    
+}
