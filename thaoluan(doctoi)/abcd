@@ -1,6 +1,13 @@
 -VIỆC CẦN LÀM:
-    +Giao diện
+    *User
+    +Giao diện cân nhắc như ảnh
     +Login
+    +Mua sản phẩm=thêm giỏ hàng
+    +Rate
+    +Search hoặc lọc bằng thanh dọc bên trái(lọc theo mức giá hoặc lọc theo tag sản phẩm)
+    *Bán
+    +Upload sản phẩm
+    +Xem doanh số
 -MUỐN:
     +Mail tự động trong quên mk(Trọng làm cho)
-*Bổ sung thêm nhe
+*Bổ sung thêm nhe   
