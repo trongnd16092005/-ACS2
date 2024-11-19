@@ -9,20 +9,14 @@
 
     <!-- Sử dụng CDN Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <link rel="stylesheet" href="css/style.css"> <!-- Đường dẫn đến tệp CSS trong thư mục Views -->
 
-    <style>
-        .cart-btn i {
-            font-size: 30px; /* Kích thước icon */
-            color: black; /* Màu sắc icon */
-        }
-    </style>
 </head>
 
 <body>
     <?php include "home/navbar.php" ?>
     <?php include 'home/header.php'; ?>   <!-- Đường dẫn đến header -->
+
 
     <script>
       window.addEventListener('scroll', () => {
@@ -38,8 +32,7 @@
     </script>
 
     <main style="height: 2000px;">
-        <h2>Chào mừng đến với website của chúng tôi</h2>
-        <p>Đây là phần nội dung chính của trang web.</p>
+        <?php include "Slide/slide.php" ?>
     </main>
 
     <?php include 'home/footer.php'; ?>   <!-- Đường dẫn đến footer -->
