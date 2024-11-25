@@ -70,7 +70,7 @@ nav ul li:last-child::after {
     z-index: 100000;
 } */
 
-header {
+header.head {
     background-color: #4CAF50;
     color: rgb(245, 21, 21);
     width: 100%;
@@ -98,7 +98,7 @@ header {
 } */
 
 /* Khi header được dính cố định */
-header.fixed {
+header.head.fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -124,66 +124,133 @@ header.fixed {
 }
 
 /* Phần thanh tìm kiếm */
-.search {
+/* .search {
     display: flex;
     align-items: center;
     flex-grow: 1;
-    width: 100%; /* Đảm bảo phần tìm kiếm chiếm toàn bộ chiều rộng */
-}
+    width: 100%; 
+} */
 
 /* Ô tìm kiếm */
-.search-input {
+/* .search-input {
     padding: 6px 12px; /* Giữ padding như trước */
-    font-size: 15px; /* Giảm nhẹ kích thước font chữ */
-    min-width: 50px; /* Đảm bảo độ rộng tối thiểu */
-    width: 800px; /* Tăng chiều rộng lên gấp đôi (hoặc theo kích thước bạn mong muốn) */
-    max-width: 100%; /* Đảm bảo không bị vượt quá container */
+    /* font-size: 15px; 
+    min-width: 50px; 
+    width: 800px; 
+    max-width: 100%;
     border-radius: 4px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
+}  */
 
 
 /* Nút tìm kiếm */
-.search-btn {
+/* .search-btn {
     background-color: white;
     color: #333;
     padding: 6px 12px; /* Giảm padding nhẹ */
-    margin-left: 10px;
+    /* margin-left: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}  */
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
 }
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+    height: 20px; /* Giữ chiều cao là 16px */
+    padding: 16px 16px;
+
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
 .cart-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 6px 12px; /* Giảm padding nhẹ */
-    margin-left: 10px;
+    padding: 6px 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.cart-btn i {
-    font-size: 30px; /* Kích thước icon */
+#cart-btn i {
+    font-size: 30px; 
 }
 
-.cart-btn:hover{
-    background-color:#333;
-    color: white;
-    
-}
-
-.signin-btn{
-    background-color: white;
+#cart-btn:hover{
     color: #333;
-    padding: 6px 12px; /* Giảm padding nhẹ */
-    margin-left: 10px;
+    background-color:white;
+}
+
+#signin-btn{
+    background-color: blue;
+    color: #333;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
+ /* Profile Picture */
+ .profile-pic{
+    display: inline-block;
+    vertical-align: middle;
+    padding:0 20px ;
+     /* width: 50px; */
+     overflow: hidden;
+ }
+ .profile-pic i{
+    color:white;
+    font-size:30px;
+ }
+
+ .profile-menu .dropdown-menu {
+   right: 0;
+   left: unset;
+ }
+ .profile-menu .fa-fw {
+   margin-right: 10px;
+ }
+ 
+ .nav-link.dropdown-toggle::after {
+    color: white; /* Đổi màu của icon thành trắng */
+}
+
+.nav-link.dropdown-toggle{
+    color: #4CAF50;
+}
+.nav-link.dropdown-toggle:hover {
+    color: #4CAF50;
+}
+
+ .toggle-change::after {
+   border-top: 0;
+   border-bottom: 0.3em solid;
+ }
 
 /* Main content */
 main {
@@ -197,11 +264,12 @@ footer {
     background-color: #4CAF50;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     position: relative;
     bottom: 0;
     height: auto;
     width: 100%;
+    margin-top:40px;
 }
 
 .container-footer{
@@ -271,7 +339,7 @@ footer {
 .footer-widget h6{
     color: #333;
     margin: 10px 0 35px;
-    font-size: 20pxp;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -397,4 +465,59 @@ list-style: none;
     .slider{
         height: 400px;
     }
+}
+.img-account-profile {
+    height: 10rem;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: #7de680;
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control, .dataTable-input {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+    color: #0061f2;
+    border-bottom-color: #0061f2;
+}
+.nav-borders .nav-link {
+    color: #69707a;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
